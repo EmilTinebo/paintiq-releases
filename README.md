@@ -66,8 +66,13 @@ Betaversionerna är inte signerade med något utgivarcertifikat, så operativsys
 Programmet är inte skadligt – varningen beror bara på att certifikatet saknas.
 
 - **Windows:** när SmartScreen visar *Windows skyddade din dator*, välj **Mer info → Kör ändå**.
-- **macOS:** dra PaintIQ till Program, högerklicka sedan på appen och välj **Öppna** (bekräfta i dialogen).
-  Om macOS ändå vägrar, öppna Terminal och kör:
+- **macOS:** dra PaintIQ till Program och starta den. När macOS säger att appen inte kan öppnas eftersom
+  utvecklaren inte kan verifieras:
+  1. Öppna **Systeminställningar → Integritet och säkerhet**.
+  2. Scrolla ner till meddelandet om PaintIQ och välj **Öppna ändå**. Bekräfta med ditt lösenord.
+
+  (På äldre macOS räcker det att högerklicka på appen och välja **Öppna**.)
+  Om macOS i stället säger att appen är *skadad*, ta bort nedladdningsmärkningen i Terminal och starta igen:
   `xattr -dr com.apple.quarantine /Applications/PaintIQ.app`
 
 ## Vart är det på väg
